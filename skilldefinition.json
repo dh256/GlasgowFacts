@@ -16,37 +16,49 @@
                     "samples": []
                 },
                 {
-                    "name": "TellMeAFact",
+                    "name": "RandomFact",
+                    "slots": [],
+                    "samples": [
+                        "Please tell me a random fact",
+                        "Give me a fact",
+                        "a fact",
+                        "Tell me any fact",
+                        "Please tell me a fact",
+                        "Tell me a random fact",
+                        "Tell me a fact"
+                    ]
+                },
+                {
+                    "name": "YearFact",
                     "slots": [
                         {
                             "name": "year",
                             "type": "AMAZON.DATE"
-                        },
+                        }
+                    ],
+                    "samples": [
+                        "Tell me an event from {year}",
+                        "What happenned in {year}",
+                        "Give me a fact from {year}",
+                        "Tell me something about {year}",
+                        "Tell me a fact from {year}"
+                    ]
+                },
+                {
+                    "name": "CenturyFact",
+                    "slots": [
                         {
                             "name": "century",
                             "type": "century"
                         }
                     ],
                     "samples": [
-                        "{year}",
-                        "{century} century",
-                        "Please give me a fact from {year}",
-                        "{year} fact",
-                        "{century} century fact",
-                        "Tell me a fact from the {century} century",
-                        "Tell me a fact from {year}",
-                        "Tell me a random fact",
-                        "Tell me a fact",
-                        "Give me a fact",
-                        "Please tell me a fact",
-                        "Please tell me a random fact",
-                        "A fact please",
-                        "Give me a fact from {year}",
-                        "Give me a fact from the {year}",
+                        "Tell me a fact from {century} century",
+                        "What happenned in the {century} century",
                         "Give me a fact from the {century} century",
-                        "Random fact if you don't mind",
-                        "Random fact",
-                        "fact"
+                        "Tell me something about the {century} century",
+                        "Tell me a fact from the {century} century",
+                        "{century} century fact"
                     ]
                 }
             ],
@@ -81,6 +93,26 @@
                                 "synonyms": [
                                     "15th",
                                     "fifteenth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "14",
+                            "name": {
+                                "value": "14",
+                                "synonyms": [
+                                    "14th",
+                                    "fourteenth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "13",
+                            "name": {
+                                "value": "13",
+                                "synonyms": [
+                                    "13th",
+                                    "thirteenth"
                                 ]
                             }
                         },

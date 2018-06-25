@@ -1,7 +1,7 @@
 /* eslint-disable  func-names */
 /* eslint quote-props: ["error", "consistent"]*/
 var Alexa=require('alexa-sdk');
-let APP_ID='amzn1.ask.skill.5bfa4bca-389e-4435-b317-dfaddb2a0835';          // put your skill id here
+let APP_ID='amzn1.ask.skill.0acf6991-f72f-4d3d-8379-9b55c8e782ad';          // put your skill id here
 
 // card images (large and small)
 const imageObj = {
@@ -12,7 +12,58 @@ const imageObj = {
 
 // Alexa Skill Request Handlers
 var handlers = {
-    'TellMeAFact': function() {
+    'RandomFact': function() {
+        let fact = getRandomFact(facts.facts);
+        let speechResponse = `<say-as interpret-as='date' format='y'>${fact.year}</say-as> ${fact.fact}`;
+        let cardTitle = `A Glasgow Fact`;
+        let cardContent = `${fact.year} ${fact.fact}`;
+
+        /* create Alexa response and emit back to caller */
+        this.response.speak(speechResponse).cardRenderer(cardTitle,cardContent,imageObj).listen('');
+        this.emit(':responseReady');
+    },
+    
+    'YearFact': function() {
+        var cardTitle = "Glasgow Facts";
+        var speechResponse = null;
+        var cardContent = null;
+        
+        let minMax = minMaximum();
+        
+        let year = this.event.request.intent.slots.year;
+        if(year && year.value) {
+            if(year.value < minMax.minYear) {
+                speechResponse = `Facts only go back to <say-as interpret-as='date' format='y'>${minMax.minYear}</say-as>`;
+                cardContent = `Facts only go back to ${minMax.minYear}`;
+            }
+            else if (year.value >  minMax.maxYear) {
+                speechResponse = `Facts only go up to <say-as interpret-as='date' format='y'>${minMax.maxYear}</say-as>`;
+                cardContent = `Facts only go up to ${minMax.maxYear}`;
+            }
+            else {
+                let fact = getYearFact(year.value);
+                if(fact) {
+                    speechResponse = `<say-as interpret-as='date' format='y'>${year.value}</say-as> ${fact.fact}`;
+                    cardTitle = `${year.value}`;
+                    cardContent = `${fact.fact}`;
+                }
+                else {
+                    speechResponse = `I don't have any facts about <say-as interpret-as='date' format='y'>${year.value}</say-as>`;
+                    cardContent = `I don't know any facts about ${year.value}`;
+                }
+            }
+        }
+        else {
+            speechResponse = "Invalid year request. Please try again.";
+            cardContent = "Invalid year request. Please try again.";
+        }
+        
+        /* create Alexa response and emit back to caller */
+        this.response.speak(speechResponse).cardRenderer(cardTitle,cardContent,imageObj).listen('');
+        this.emit(':responseReady');
+    },
+    
+    'CenturyFact': function() {
         var cardTitle = "Glasgow Facts";
         var speechResponse = null;
         var cardContent = null;
@@ -22,67 +73,43 @@ var handlers = {
         /* Is user asking for a fact from a particular century */
         let century = this.event.request.intent.slots.century;
         if(century && century.value) {
-            // now get canonical value
-            let centCanVal = century.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-            if(centCanVal < minMax.minCent) {
-                speechResponse = `Facts only go back to ${minMax.minCent} century`;
-                cardContent = `Facts only go back to ${minMax.minCent} cetnury`;
-            }
-            else if (centCanVal > minMax.maxCent) {
-                speechResponse = `Facts only go up to ${minMax.maxCent} century`;
-                cardContent = `Facts only go up to ${minMax.maxCent} century`;
-            }
-            else {
-                let fact = getCenturyFact(centCanVal);
-                if(fact) {
-                    speechResponse = `<say-as interpret-as='date' format='y'>${fact.year}</say-as> ${fact.fact}`;
-                    cardTitle = `A ${century.value} century fact`;
-                    cardContent = `${fact.year} ${fact.fact}`;
+            // now get canonical value - if one exists
+            let match = century.resolutions.resolutionsPerAuthority[0].status.code == "ER_SUCCESS_MATCH";
+            if (match) {
+                let centCanVal = century.resolutions.resolutionsPerAuthority[0].values[0].value.name;
+                if(centCanVal < minMax.minCent) {
+                    speechResponse = `Facts only go back to ${minMax.minCent} century`;
+                    cardContent = `Facts only go back to ${minMax.minCent} cetnury`;
+                }
+                else if (centCanVal > minMax.maxCent) {
+                    speechResponse = `Facts only go up to ${minMax.maxCent} century`;
+                    cardContent = `Facts only go up to ${minMax.maxCent} century`;
                 }
                 else {
-                    speechResponse = `I don't know any facts from ${century.value} century`;
-                    cardContent = `I don't know any facts from ${century.value} century`;
+                    let fact = getCenturyFact(centCanVal);
+                    if(fact) {
+                        speechResponse = `<say-as interpret-as='date' format='y'>${fact.year}</say-as> ${fact.fact}`;
+                        cardTitle = `A ${century.value} century fact`;
+                        cardContent = `${fact.year} ${fact.fact}`;
+                    }
+                    else {
+                        speechResponse = `I don't know any facts from ${century.value} century`;
+                        cardContent = `I don't know any facts from ${century.value} century`;
+                    }
                 }
-            }
-        }
-
-        /* Is user asking for a fact from a particular year */
-        let year = this.event.request.intent.slots.year;
-        if(year && year.value) {
-            if(year.value < minMax.minYear) {
-                speechResponse = `Facts only go back to <emphasis><say-as interpret-as='date' format='y'>${minMax.minYear}</say-as>`;
-                cardContent = `Facts only go back to ${minMax.minYear}`;
-            }
-            else if (year.value >  minMax.maxYear) {
-                speechResponse = `Facts only go up to <emphasis><say-as interpret-as='date' format='y'>${minMax.minYear}</say-as>`;
-                cardContent = `Facts only go up to ${minMax.minYear}`;
             }
             else {
-                console.log(`getYearFact`);
-                let fact = getYearFact(year.value);
-                if(fact) {
-                    speechResponse = `<say-as interpret-as='date' format='y'>${year.value}</say-as> ${fact.fact}`;
-                    cardTitle = `${year.value}`;
-                    cardContent = `${fact.fact}`;
-                }
-                else {
-                    speechResponse = `I don't know have facts from <say-as interpret-as='date' format='y'>${year.value}</say-as>`;
-                    cardContent = `I don't know any facts from ${year.value}`;
-                }
+                // handle missing canonical value issue
+                speechResponse = `Problem. I can't find a canonical value for ${century.value} century`;
+                cardTitle = "Error";
+                cardContent = `Can't find a canonical value for ${century.value} century`;
             }
         }
-
-        /* if not year or century, get a random fact */
-        if(speechResponse == null) {
-            let fact = getRandomFact(facts.facts);
-            speechResponse = `<say-as interpret-as='date' format='y'>${fact.year}</say-as> ${fact.fact}`;
-            cardTitle = `A random fact`;
-            cardContent = `${fact.year} ${fact.fact}`;
-        } 
 
         /* create Alexa response and emit back to caller */
         this.response.speak(speechResponse).cardRenderer(cardTitle,cardContent,imageObj).listen('');
         this.emit(':responseReady');
+        
     },
     
     'LaunchRequest': function() {
@@ -230,7 +257,7 @@ let facts = {
         },
         {
             "year": 1745,	
-            "fact": "Tenents open a new brewery in Glasgow"
+            "fact": "Tenents open a new brewery in Duke Street"
         },
         {
             "year": 1814,	
