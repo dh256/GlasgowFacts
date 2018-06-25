@@ -42,7 +42,11 @@
                         "Please tell me a random fact",
                         "A fact please",
                         "Give me a fact from {year}",
-                        "Give me a fact from the {century} century"
+                        "Give me a fact from the {year}",
+                        "Give me a fact from the {century} century",
+                        "Random fact if you don't mind",
+                        "Random fact",
+                        "fact"
                     ]
                 }
             ],
@@ -67,6 +71,16 @@
                                 "synonyms": [
                                     "16th",
                                     "sixteenth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "15",
+                            "name": {
+                                "value": "15",
+                                "synonyms": [
+                                    "15th",
+                                    "fifteenth"
                                 ]
                             }
                         },
