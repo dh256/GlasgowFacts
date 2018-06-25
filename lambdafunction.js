@@ -40,8 +40,8 @@ var handlers = {
                     cardContent = `${fact.year} ${fact.fact}`;
                 }
                 else {
-                    speechResponse = `I don't know any facts from ${century.value}`;
-                    cardContent = `I don't know any facts from ${century.value}`;
+                    speechResponse = `I don't know any facts from ${century.value} century`;
+                    cardContent = `I don't know any facts from ${century.value} century`;
                 }
             }
         }
