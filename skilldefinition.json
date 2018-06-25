@@ -1,0 +1,110 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "glasgow facts",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "TellMeAFact",
+                    "slots": [
+                        {
+                            "name": "year",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "century",
+                            "type": "century"
+                        }
+                    ],
+                    "samples": [
+                        "Please give me a fact from {year}",
+                        "{year} fact",
+                        "{century} century fact",
+                        "Tell me a fact from the {century} century",
+                        "Tell me a fact from {year}",
+                        "Tell me a random fact",
+                        "Tell me a fact"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "century",
+                    "values": [
+                        {
+                            "id": "20",
+                            "name": {
+                                "value": "20",
+                                "synonyms": [
+                                    "twentieth",
+                                    "20th"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "16",
+                            "name": {
+                                "value": "16",
+                                "synonyms": [
+                                    "16th",
+                                    "sixteenth"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "17",
+                            "name": {
+                                "value": "17",
+                                "synonyms": [
+                                    "seventeenth",
+                                    "17th"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "18",
+                            "name": {
+                                "value": "18",
+                                "synonyms": [
+                                    "eighteenth",
+                                    "18"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "19",
+                            "name": {
+                                "value": "19",
+                                "synonyms": [
+                                    "nineteenth",
+                                    "19th"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "21",
+                            "name": {
+                                "value": "21",
+                                "synonyms": [
+                                    "21st",
+                                    "twenty first"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

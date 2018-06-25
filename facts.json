@@ -1,0 +1,73 @@
+{
+    "Facts": 
+    [
+        {
+            "Year": 1983, 
+            "Fact": "Burrell Collection opens in Pollock Park"
+        },
+        {
+            "Year": 2014,	
+            "Fact": "Glasgow hosts the 20th Commonwealth Games"
+        },
+        {
+            "Year": 2014,	
+            "Fact": "A fire destroys much of the Mackintosh building at Glasgow School of Art"
+        },
+        {   "Year": 2013,
+            "Fact":	"Police helicopter crashes onto roof of Clutha pub killing 10 people"
+        },
+        {
+            "Year": 2002,
+            "Fact": "Hosts the UEFA Champions League final at Hampden Park. Real Madrid win"
+        },
+        {
+            "Year": 2007,
+            "Fact": "Awared rights to hold 20th Commonwealth Games in 2014"
+        },
+        {
+            "Year": 1988,	
+            "Fact": "Host the Glasgow Garden Festival. 4.3 million visitors attend in only 5 months"
+        },
+        {
+            "Year": 1997,	
+            "Fact": "The Clyde Autorioum, affectionally known as The Armadillo opens"
+        },
+        {
+            "Year": 1962,	
+            "Fact": "The last Glasgow tram runs"
+        },
+        {
+            "Year": 1980,	
+            "Fact": "Subway, affectionally known as the Clockwork Orange, reopens after 3 year upgrade"
+        },
+        {
+            "Year": 1990,	
+            "Fact": "The Glasgow Royal Concert Hall opens. Widely renowned as one of World's best halls"
+        },
+        {
+            "Year": 1971,	
+            "Fact": "66 people killed at Ibrox Stadium as a result of a crush."
+        },
+        {
+            "Year": 1967,
+            "Fact":	"Celtic F.C. win the European Cup. First British club to do so"
+        },
+        {
+            "Year": 1972,
+            "Fact":	"Ranges F.C. win the European Cup Winners Cup"
+        },
+        {
+            "Year": 1941,	
+            "Fact": "German bombing raids decimate Clydebank and kill 528 people. Only 7 houses out of 12000 left undamaged."
+        },
+        {
+            "Year": 1919,	
+            "Fact": "Black Friday - Battle of George Square. Tanks deployed to quell rioting by workers striking for a 40-hour week"
+        },
+        {
+            "Year": 1859,	
+            "Fact": "A clean water supply carrying water in aquaducts from Loch Katrine in the Trossachs is completed. Today it supplies 230 million of litres of water a day to the city"
+        }
+    ]
+}
+

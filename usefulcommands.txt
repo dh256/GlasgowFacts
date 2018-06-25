@@ -1,0 +1,15 @@
+A list of useful commands for doing the exercise
+
+deploylambda.sh
+
+This is an alternative way of deploying a Lambda - you write Lambda locally, ZIP it up and deploy it. You can also opt to run a test to validate deployment.
+If using node this is essential if you want to use npm packages. You cannot add npm using the in-built editor
+
+
+Testing locally - there is a BETA AWS service AWS SAM that allows you to run Lambda functions locally.
+I haven't used this yet.
+
+
+
+
+

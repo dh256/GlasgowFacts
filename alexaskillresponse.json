@@ -1,0 +1,29 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "SSML",
+				"ssml": "<speak> <emphasis><say-as interpret-as='date' format='y'>2076</say-as></emphasis> I would need a DeLorean to tell you that </speak>"
+			},
+			"card": {
+				"type": "Standard",
+				"title": "Fact",
+				"text": "2076 I can't predict the future",
+				"image": {
+					"smallImageUrl": "https://s3.amazonaws.com/alexaskilimages/JPMLogo.jpg",
+					"largeImageUrl": "https://s3.amazonaws.com/alexaskilimages/JPMLogo.jpg"
+				}
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "SSML",
+					"ssml": "<speak>  </speak>"
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {},
+		"userAgent": "ask-nodejs/1.0.25 Node/v8.10.0"
+	}
+}
