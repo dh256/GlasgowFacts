@@ -19,6 +19,7 @@ var handlers = {
         
         let minMax = minMaximum();
         
+        /* Is user asking for a fact from a particular century */
         let century = this.event.request.intent.slots.century;
         if(century && century.value) {
             // now get canonical value
@@ -45,6 +46,7 @@ var handlers = {
             }
         }
 
+        /* Is user asking for a fact from a particular year */
         let year = this.event.request.intent.slots.year;
         if(year && year.value) {
             if(year.value < minMax.minYear) {
@@ -70,7 +72,7 @@ var handlers = {
             }
         }
 
-        /* get random fact */
+        /* if not year or century, get a random fact */
         if(speechResponse == null) {
             let fact = getRandomFact(facts.facts);
             speechResponse = `<say-as interpret-as='date' format='y'>${fact.year}</say-as> ${fact.fact}`;
@@ -78,7 +80,7 @@ var handlers = {
             cardContent = `${fact.year} ${fact.fact}`;
         } 
 
-        /* create Alexa response and emit */
+        /* create Alexa response and emit back to caller */
         this.response.speak(speechResponse).cardRenderer(cardTitle,cardContent,imageObj).listen('');
         this.emit(':responseReady');
     },
