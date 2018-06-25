@@ -1,73 +1,138 @@
 {
-    "Facts": 
+    "facts": 
     [
         {
-            "Year": 1983, 
-            "Fact": "Burrell Collection opens in Pollock Park"
+            "year": 1904, 
+            "fact": "The Kings and Pavillion theatres open"
         },
         {
-            "Year": 2014,	
-            "Fact": "Glasgow hosts the 20th Commonwealth Games"
+            "year": 1678, 
+            "fact": "First Stagecoach run to Edinburgh. Still faster than Scotrail?"
         },
         {
-            "Year": 2014,	
-            "Fact": "A fire destroys much of the Mackintosh building at Glasgow School of Art"
-        },
-        {   "Year": 2013,
-            "Fact":	"Police helicopter crashes onto roof of Clutha pub killing 10 people"
+            "year": 1967, 
+            "fact": "QE2 liner is launched from John Brown Shipbuilders in Clydebank. The last great liner built on the Clyde"
         },
         {
-            "Year": 2002,
-            "Fact": "Hosts the UEFA Champions League final at Hampden Park. Real Madrid win"
+            "year": 1970, 
+            "fact": "Kingston Bridge section of M8 opens"
         },
         {
-            "Year": 2007,
-            "Fact": "Awared rights to hold 20th Commonwealth Games in 2014"
+            "year": 1935, 
+            "fact": "Glasgow Subway is electrified. Previously worked by a cable pulley system"
         },
         {
-            "Year": 1988,	
-            "Fact": "Host the Glasgow Garden Festival. 4.3 million visitors attend in only 5 months"
+            "year": 1983, 
+            "fact": "Burrell Collection opens in Pollock Park"
         },
         {
-            "Year": 1997,	
-            "Fact": "The Clyde Autorioum, affectionally known as The Armadillo opens"
+            "year": 2014,	
+            "fact": "Glasgow hosts the 20th Commonwealth Games"
         },
         {
-            "Year": 1962,	
-            "Fact": "The last Glasgow tram runs"
+            "year": 2014,	
+            "fact": "A fire destroys much of the Mackintosh building at Glasgow School of Art"
+        },
+        {   "year": 2013,
+            "fact":	"Police helicopter crashes onto roof of Clutha pub killing 10 people"
         },
         {
-            "Year": 1980,	
-            "Fact": "Subway, affectionally known as the Clockwork Orange, reopens after 3 year upgrade"
+            "year": 2002,
+            "fact": "Hosts the UEFA Champions League final at Hampden Park. Real Madrid win"
         },
         {
-            "Year": 1990,	
-            "Fact": "The Glasgow Royal Concert Hall opens. Widely renowned as one of World's best halls"
+            "year": 2007,
+            "fact": "Awarded rights to hold 20th Commonwealth Games in 2014"
         },
         {
-            "Year": 1971,	
-            "Fact": "66 people killed at Ibrox Stadium as a result of a crush."
+            "year": 1988,	
+            "fact": "Host the Glasgow Garden Festival. 4.3 million visitors attend in only 5 months"
         },
         {
-            "Year": 1967,
-            "Fact":	"Celtic F.C. win the European Cup. First British club to do so"
+            "year": 1997,	
+            "fact": "The Clyde Audotorium, affectionally known as The Armadillo, opens"
         },
         {
-            "Year": 1972,
-            "Fact":	"Ranges F.C. win the European Cup Winners Cup"
+            "year": 1962,	
+            "fact": "The last Glasgow tram runs"
         },
         {
-            "Year": 1941,	
-            "Fact": "German bombing raids decimate Clydebank and kill 528 people. Only 7 houses out of 12000 left undamaged."
+            "year": 1980,	
+            "fact": "Subway, affectionally known as the Clockwork Orange, reopens after a 3 year upgrade"
         },
         {
-            "Year": 1919,	
-            "Fact": "Black Friday - Battle of George Square. Tanks deployed to quell rioting by workers striking for a 40-hour week"
+            "year": 1990,	
+            "fact": "The Glasgow Royal Concert Hall opens. Widely renowned as one of World's best halls"
         },
         {
-            "Year": 1859,	
-            "Fact": "A clean water supply carrying water in aquaducts from Loch Katrine in the Trossachs is completed. Today it supplies 230 million of litres of water a day to the city"
+            "year": 1990,	
+            "fact": "Glasgow is European City of Culture"
+        },
+        {
+            "year": 1971,	
+            "fact": "66 people killed at Ibrox Stadium as a result of a crush. Second major disaster at Ibrox."
+        },
+        {
+            "year": 1967,
+            "fact":	"Celtic F.C. win the European Cup. First British club to do so"
+        },
+        {
+            "year": 1972,
+            "fact":	"Rangers F.C. win the European Cup Winners Cup"
+        },
+        {
+            "year": 1941,	
+            "fact": "German bombing raids decimate Clydebank and kill 528 people. Only 7 out of 12000 properties left undamaged."
+        },
+        {
+            "year": 1919,	
+            "fact": "Black Friday - Battle of George Square. Tanks deployed to quell rioting by workers striking for a 40-hour week"
+        },
+        {
+            "year": 1859,	
+            "fact": "A clean water supply carrying water in aquaducts from Loch Katrine in the Trossachs is completed. Today it supplies 230 million of litres of water a day to the city"
+        },
+        {
+            "year": 1645,	
+            "fact": "Plague hits the city, again!"
+        },
+        {
+            "year": 1451,	
+            "fact": "University of Glasgow is established in High Street"
+        },
+        {
+            "year": 1471,	
+            "fact": "Provan's Lordship (the oldest building in Glasgow) is built"
+        },
+        {
+            "year": 1745,	
+            "fact": "Tenents open a new brewery in Glasgow"
+        },
+        {
+            "year": 1814,	
+            "fact": "Glasgow Green becomes Europe's first public park"
+        },
+        {
+            "year": 1851,
+            "fact": "Population his 330000, an increase of 800 percent in just 70 years!"
+        },
+        {
+            "year": 1870,
+            "fact": "University of Glasgow opens new site at Gilmorehill"
+        },
+        {
+            "year": 1872,
+            "fact": "Rangers Football Club is founded"
+        },
+        {
+            "year": 1887,
+            "fact": "Celtic Football Club is founded"
+        },
+        {
+            "year": 2018,
+            "fact": "A fire decimates the Glasgow School of Art, 4 years after 2014 fire"
         }
+        
     ]
 }
 

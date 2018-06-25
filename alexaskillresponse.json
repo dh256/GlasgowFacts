@@ -4,15 +4,15 @@
 		"response": {
 			"outputSpeech": {
 				"type": "SSML",
-				"ssml": "<speak> <emphasis><say-as interpret-as='date' format='y'>2076</say-as></emphasis> I would need a DeLorean to tell you that </speak>"
+				"ssml": "<speak> <say-as interpret-as='date' format='y'>1972</say-as> Rangers F.C. win the European Cup Winners Cup </speak>"
 			},
 			"card": {
 				"type": "Standard",
-				"title": "Fact",
-				"text": "2076 I can't predict the future",
+				"title": "1972",
+				"text": "Rangers F.C. win the European Cup Winners Cup",
 				"image": {
-					"smallImageUrl": "https://s3.amazonaws.com/alexaskilimages/JPMLogo.jpg",
-					"largeImageUrl": "https://s3.amazonaws.com/alexaskilimages/JPMLogo.jpg"
+					"smallImageUrl": "https://s3.amazonaws.com/alexaglasgowfacts/glasgowlogosmall.jpeg",
+					"largeImageUrl": "https://s3.amazonaws.com/alexaglasgowfacts/glasgowlogolarge.jpeg"
 				}
 			},
 			"reprompt": {
