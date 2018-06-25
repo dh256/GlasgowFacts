@@ -241,7 +241,7 @@ let facts = {
         },
         {
             "year": 1859,	
-            "fact": "A clean water supply carrying water in aquaducts from Loch Katrine in the Trossachs is completed. Today it supplies 230 million of litres of water a day to the city"
+            "fact": "A clean water supply carrying water in aquaducts from Loch Katrine in the Trossachs is completed. Today it supplies 230 million litres of water a day to the city"
         },
         {
             "year": 1645,	
@@ -290,7 +290,7 @@ let facts = {
 
 
 function minMaximum() {
-    var maxYear = Number.MIN_SAFE_INTEGER;;
+    var maxYear = Number.MIN_SAFE_INTEGER;
     var minYear = Number.MAX_SAFE_INTEGER;
     for(var index = 0; index < facts.facts.length; index++) {
         if(facts.facts[index].year > maxYear) {
